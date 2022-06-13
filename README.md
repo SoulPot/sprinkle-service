@@ -1,11 +1,10 @@
-Typescript Skeleton Project
+Soulpot C2D service
 ===========================
 
 Description
 -----------
 
-This is an empty typescript project. Too lazy to do it everytime I have an idea to test.
-This project contains only the steps I do everytime I want to start a new project late night.
+Service to broadcast mqtt borker msessages to azure cloud devices on sprink topic
 
 ### It contains:
 
