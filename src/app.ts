@@ -1,13 +1,21 @@
 import * as mqtt from 'mqtt';
 import { C2DService } from './C2DService';
 
+const MQTT_HOST = 'mqtt://alesia-julianitow.ovh:9443'
+const MQTT_USERNAME = 'soulpot';
+const MQTT_PASSWORD = 'soulpot';
+const MQTT_CLIENT_ID = 'sprinkle-service';
+
 function initMqtt(): mqtt.Client {
-  const client = mqtt.connect('mqtt://alesia-julianitow.ovh:9443');
+  const client = mqtt.connect(MQTT_HOST, {username: MQTT_USERNAME, password: MQTT_PASSWORD, clientId: MQTT_CLIENT_ID});
   const topic = 'sprink/#';
   client.on('connect', () => {
     client.subscribe(topic, (err: Error) => {
       if (err) { console.error(err.message); return; }
     });
+  });
+  client.on('disconnect', () => {
+    client.end();
   });
   return client;
 }
