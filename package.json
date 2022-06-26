@@ -25,7 +25,6 @@
     "typescript": "^4.7.3"
   },
   "dependencies": {
-    "@types/mqtt": "^2.5.0",
     "azure-iothub": "^1.15.0",
     "express": "^4.16.4",
     "mqtt": "^4.3.7",
