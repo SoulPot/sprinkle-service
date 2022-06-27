@@ -28,6 +28,11 @@ How to use ?
 
 Done!
 
+Docker
+======
+Official image:
+[julianitow/sprinkle-service](https://hub.docker.com/repository/docker/julianitow/sprinkle-c2d-service)
+
 Development
 ===========
 > ``` npm run start:watch```  
