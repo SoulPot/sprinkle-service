@@ -8,7 +8,7 @@ const MQTT_CLIENT_ID = 'sprinkle-service';
 
 function initMqtt(): mqtt.Client {
   const client = mqtt.connect(MQTT_HOST, {username: MQTT_USERNAME, password: MQTT_PASSWORD, clientId: MQTT_CLIENT_ID});
-  const topic = 'sprink/#';
+  const topic = 'events/#';
   client.on('connect', () => {
     client.subscribe(topic, (err: Error) => {
       if (err) { console.error(err.message); return; }
